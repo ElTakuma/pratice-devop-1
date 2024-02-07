@@ -9,4 +9,11 @@ public class CalculatorServiceImpl implements CalculatorService {
     public double sum(double a, double b) {
         return a + b;
     }
+
+    @Override
+    public double subtract(double a, double b) {
+        return a - b;
+    }
+
+
 }

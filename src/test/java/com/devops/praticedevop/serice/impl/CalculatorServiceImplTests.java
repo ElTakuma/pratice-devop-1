@@ -18,4 +18,10 @@ public class CalculatorServiceImplTests {
         double sum = 3;
         assertEquals(sum, calculatorService.sum(1, 2));
     }
+
+    @Test
+    public void testSubtract(){
+        double sum = 0;
+        assertEquals(sum, calculatorService.subtract(2, 2));
+    }
 }
