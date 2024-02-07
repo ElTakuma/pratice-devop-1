@@ -11,7 +11,7 @@ import org.springframework.util.Assert;
 @SpringBootTest
 public class CalculatorServiceImplTests {
 
-    private final CalculatorService calculatorService = new CalculatorServiceImpl();
+    private final CalculatorServiceImpl calculatorService = new CalculatorServiceImpl();
 
     @Test
     public void testSum(){
@@ -23,5 +23,11 @@ public class CalculatorServiceImplTests {
     public void testSubtract(){
         double sum = 0;
         assertEquals(sum, calculatorService.subtract(2, 2));
+    }
+
+    @Test
+    public void testMultiOperation() {
+        String[] expected = {"4", "5", "9"};
+        assertArrayEquals(expected, calculatorService.multiOperation_("4+5+9"));
     }
 }
