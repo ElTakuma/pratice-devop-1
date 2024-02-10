@@ -12,4 +12,9 @@ public class CalculatorResource {
     public String[] history() {
         return "bonjour".split("");
     }
+
+    @GetMapping("/operation")
+    public String operation() {
+        return "This page is for new operation";
+    }
 }
