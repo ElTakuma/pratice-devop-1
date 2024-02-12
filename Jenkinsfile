@@ -13,6 +13,7 @@ pipeline {
             steps {
                 // Récupérer le code depuis le référentiel Git
                 git 'https://github.com/ElTakuma/pratice-devop-1.git'
+                sh 'git checkout -b main'
             }
         }
 
