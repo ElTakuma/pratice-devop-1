@@ -2,11 +2,9 @@ package com.devops.praticedevop.serice.impl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.devops.praticedevop.service.CalculatorService;
 import com.devops.praticedevop.service.impl.CalculatorServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 @SpringBootTest
 public class CalculatorServiceImplTests {
@@ -27,7 +25,17 @@ public class CalculatorServiceImplTests {
 
     @Test
     public void testMultiOperation() {
-        String[] expected = {"4", "5", "9"};
-        assertArrayEquals(expected, calculatorService.multiOperation_("4+5+9"));
+        double expected = 108;
+
+        assertEquals(expected, calculatorService.multiOperation("100-5+13"));
+    }
+
+    @Test
+    public void testExpressionSplit() {
+        String[] expected = {"100", "+", "5", "+", "7"};
+        assertArrayEquals(expected, calculatorService.expressionSplit("100+5+7"));
+
+        expected = new String[]{"100.55", "+", "0.5", "+", "7"};
+        assertArrayEquals(expected, calculatorService.expressionSplit("100.55+0.5+7"));
     }
 }

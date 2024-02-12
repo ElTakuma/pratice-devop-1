@@ -11,9 +11,6 @@ public class PracticeDevopsApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PracticeDevopsApplication.class, args);
-		CalculatorServiceImpl calculatorService = new CalculatorServiceImpl();
-
-		calculatorService.multiOperation_("4+8+9");
 	}
 
 }
