@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Récupérer le code depuis le référentiel Git
-                git 'https://github.com/votre-utilisateur/votre-projet.git'
+                git 'https://github.com/ElTakuma/pratice-devop-1.git'
             }
         }
 
@@ -40,7 +40,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Déployer le projet sur un serveur Tomcat par exemple
-                sh 'scp target/monprojet.jar utilisateur@serveur:/chemin/de/destination'
+                sh 'scp target/*.jar admin@serveur:/chemin/de/destination'
             }
         }
     }
