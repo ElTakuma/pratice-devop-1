@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Définir les variables d'environnement si nécessaire
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64'
         MAVEN_HOME = '/usr/bin/mvn'
         PATH = "${env.JAVA_HOME}/bin:${env.MAVEN_HOME}/bin:${env.PATH}"
     }
