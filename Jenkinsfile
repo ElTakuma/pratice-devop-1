@@ -30,17 +30,11 @@ pipeline {
             }
         }
 
-        stage('Package') {
-            steps {
-                // Créer le package JAR exécutable
-                sh 'mvn package'
-            }
-        }
 
         stage('Deploy') {
             steps {
                 // Déployer le projet sur un serveur Tomcat par exemple
-                sh 'scp target/*.jar admin@serveur:/chemin/de/destination'
+//                 sh 'scp target/*.jar admin@serveur:/chemin/de/destination'
                 sh 'mvn tomcat9:deploy -Dtomcat.url=http://44.204.15.118:8080 -Dtomcat.username=admin -Dtomcat.password=primus@237'
             }
         }
