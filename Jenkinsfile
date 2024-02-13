@@ -34,8 +34,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Déployer le projet sur un serveur Tomcat par exemple
-//                 sh 'scp target/*.jar admin@serveur:/chemin/de/destination'
-                sh 'mvn tomcat7:deploy -Dtomcat.url=http://44.204.15.118:8080 -Dtomcat.username=admin -Dtomcat.password=primus@237 -DskipTests=true'
+                sh 'scp target/*.war admin@44.204.15.118:8080:/destination'
+//                 sh 'mvn tomcat7:deploy -Dtomcat.url=http://44.204.15.118:8080 -Dtomcat.username=admin -Dtomcat.password=primus@237 -DskipTests=true'
             }
         }
     }
