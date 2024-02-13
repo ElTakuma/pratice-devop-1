@@ -56,7 +56,7 @@ pipeline {
     agent any
 
     environment {
-        TOMCAT_HOST = 'http://44.204.15.98'
+        TOMCAT_HOST = '44.204.15.98'
         TOMCAT_PORT = '8080'
         TOMCAT_USERNAME = 'admin'
         TOMCAT_PASSWORD = credentials('a901f112-a7f3-42e0-af05-422a847e6391	')
